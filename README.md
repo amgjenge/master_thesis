@@ -7,5 +7,5 @@ Repositoriet inneheld data og programkode som er nytta i masteroppgåva.
 
 
 
-### Engelsk
+### English
 Data and code used in master thesis
