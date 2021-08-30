@@ -32,6 +32,7 @@ make_plot <- function(df, name) {
 
 
 
+
 process_frames <- function(df) {
   #' Function that reads a df and generates a new dataframe based on the first columns value.
   #' A time series graph is made for every unique word by calling make_plot and rendered as a PNG 
@@ -50,6 +51,19 @@ process_frames <- function(df) {
 }
 
 process_frames(total_df)
+
+
+# Make custom plots
+
+make_plot(total_df %>% filter(søkeuttrykk == "Kvinnelig leder"), "Kvinnelig leder")
+ggsave(path = "graf_output/", filename= "kvinnelig_leder.png",  dpi = 400, width = 10, height = 10, type = "cairo-png")
+
+make_plot(total_df %>% filter(søkeuttrykk == "Mannlig lærer"), "Mannlig lærer")
+ggsave(path = "graf_output/", filename= "mannlig_leder.png",  dpi = 400, width = 10, height = 10, type = "cairo-png")
+
+make_plot(total_df %>% filter(søkeuttrykk == "Pianist"), "Pianist")
+ggsave(path = "graf_output/", filename= "pianist.png",  dpi = 400, width = 10, height = 10, type = "cairo-png")
+
 
 
 
