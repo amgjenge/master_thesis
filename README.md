@@ -8,3 +8,4 @@ Repositoriet inneheld data og programkode nytta i masteroppgåva.
 
 
 ### Engelsk
+Data and code used in master thesis
